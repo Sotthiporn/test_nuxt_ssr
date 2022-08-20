@@ -32,6 +32,11 @@
 <script>
 export default {
   name: "IndexPage",
+  head() {
+    return {
+      title: "Test Nuxt SSR",
+    };
+  },
   async asyncData({ $axios, redirect }) {
     try {
       const { data } = await $axios.$post(
