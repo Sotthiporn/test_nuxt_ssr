@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build --port 49000",
+    "build": "nuxt build ",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "pm2 restart ecosystem.config.js"
+    "deploy":"pm2 start npm --name test_nuxt_ssr start",
+    "restart": "pm2 restart test_nuxt_ssr"
+
   },
   "dependencies": {
     "core-js": "^3.19.3",
@@ -18,5 +20,11 @@
     "webpack": "^4.46.0",
     "@nuxtjs/axios": "^5.13.6"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "49000"
+    }
+  }
 }
