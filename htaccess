@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^index.php(.*) http://test-nuxt-ssr.phama-tech.com::49000/$1 [P,L]
+RewriteRule (.*) http://test-nuxt-ssr.phama-tech.com:49000/$1 [P,L]
