@@ -1,6 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   debug: true,
+  server: {
+    port: process.env.port,
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Test Nuxt SSR",
