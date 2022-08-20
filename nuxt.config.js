@@ -31,11 +31,6 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/axios"],
 
-  router: {
-    base: "/app/",
-  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    publicPath: "https://test-nuxt-ssr.phama-tech.com",
-  },
+  build: {},
 };
